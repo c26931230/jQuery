@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery</title>
+    <script src="./js/jquery-3.6.1.js"></script>
+    <script>
+        $(document).ready(function(){
+            // $('input[type="text"]').focus(function(){
+            //     $(this).css('background-color','yellow')
+            // })
+            $(':text').focus(function(){
+                $(this).css('background-color','yellow')
+            }).blur(function(){
+                $(this).css('backgroundColor','#fff')
+            })
+
+            // alert($(':text').css('background-color')
+            $('input[type="email"]').focus(function(){
+                // $(this).css('background-color','yellow').css('font-size','24px')
+                $(this).css({
+                    backgroundColor: 'yellow',
+                    fontSize: 24,
+                }).attr('placeholder','')
+            }).blur(function(){
+                $(this).css('backgroundColor','#fff').css('fontSize','16px')
+                
+                if($(this).val() == ''){
+                    $(this).attr('placeholder','example@icloud.com')
+                }
+
+            })
+
+            $('label').css({
+                textTransform: 'capitalize',
+                width: 100,
+                float: 'left',
+            })
+
+            $(':submit').css('textTransform','capitalize').click(function(){
+                $(this).val('Please wait...')
+            })
+
+            // alert( $('textarea').css('font'))  //13.3333px monospace
+            // $('textarea').focus().blur()
+            // $('textarea').focus(function(){}).blur(function(){})
+            $('textarea').focus(function(){
+                // $(this).attr('cols',35).attr('rows',5)
+                $(this).attr({
+                    cols: 35,
+                    rows: 10,
+                }).css({
+                    backgroundColor: 'yellow',
+                    fontSize: 20,
+                    fontFamily: 'Calibri',
+                })
+            }).blur(function(){
+                $(this).attr({
+                    cols: 20,
+                    rows: 2,
+                }).css({
+                    backgroundColor: '#fff',
+                    fontSize: 13.3333,
+                    fontFamily: 'monospace',
+                })
+            })
+        })
+    </script>
+</head>
+<body>
+    <p>
+        <label for="name">your name: </label>
+        <input type="text" id="name">
+    </p>
+    <p>
+        <label for="email">email: </label>
+        <input type="email" id="email" placeholder="Your email ...">
+    </p>
+    <input type="submit" value="click">
+    <input type="submit" value="click">
+    <p>
+        <textarea></textarea>
+    </p>
+</body>
+</html>
+
+<!-- 
+    What did you use your computer for? 
+    I use my computer to surf the internet.
+
+-->

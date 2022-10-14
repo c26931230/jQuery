@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery</title>
+    <script src="./js/jquery-3.6.1.js"></script>
+    <script>
+        $(document).ready(function(){
+            // let ans = $('h3').text()       // getter
+            // alert(ans)
+
+            $('h3').text('Does it make sense?')  // setter
+
+            $('#box p').html('<span style="color:green">Hello</span>')  
+
+            $('p').not('#box p').html('<span style="color:red">Hi, outsider!</span>')  
+        })
+    </script>
+</head>
+<body>
+    <h3>Lorem ipsum dolor</h3>
+    <div id="box">
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+    <p>outside p</p>
+    <p>outside p</p>
+    <p>outside p</p>
+    <p>outside p</p>
+    <p>outside p</p>
+</body>
+</html>
