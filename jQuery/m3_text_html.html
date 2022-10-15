@@ -6,14 +6,11 @@
     <script src="./js/jquery-3.6.1.js"></script>
     <script>
         $(document).ready(function(){
-            let ans = $('h3').text()       // getter
-            alert(ans)
-
-            $('h3').text('Does it make sense?')  // setter
-
-            $('#box p').html('<span style="color:green">Hello</span>')  
-
-            $('p').not('#box p').html('<span style="color:red">Hi, outsider!</span>')  
+           let ans = $('h3').text();
+           alert(ans)
+           $('h3').text('Does it make sense?')
+           $('#box p').css('color','green').text('Hello')
+           $('p').not('#box p').html('<span style="color:red";>Hi outsider!</span>')
         })
     </script>
 </head>
