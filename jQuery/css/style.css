@@ -32,3 +32,24 @@
     cursor: pointer;
     background: darkgreen;
 }
+
+/* 14_animation */
+#imgBoard{
+    width: 100px;
+    padding: 30px;
+    background: #ccc;
+    position: absolute;
+    left: -130px;
+    cursor: pointer;
+}
+.myPhoto{
+    width: 100px;
+}
+
+/* 14 */
+#inCenter{
+    width: 200px;
+    height: 200px;
+    background: #ccc;
+    position: absolute;
+}

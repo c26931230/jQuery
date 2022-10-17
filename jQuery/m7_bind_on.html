@@ -8,36 +8,18 @@
     <script src="./js/jquery-3.6.1.js"></script>
     <script>
         $(function () { 
-           $(p).()
+           $(document).on('mouseenter, mouseleave','p>span',function(){
+                $(this).toggleClass('highlight')
+                $(this).css({
+                    cursor:'pointer',
+                })
+                
+           })
+        //    $(document).on('mouseenter mouseleave','p>span',function(){
+        //         $(this).toggleClass('highlight')
+        //     })
             
 
-            // $().bind('事件',處理函數)
-            // $('p>span').bind().bind()
-            // $('p>span').bind('mouseenter',function(){}).bind('mouseleave',function(){})
-            // $('p>span').bind('mouseenter',function(){
-            //     $(this).addClass('highlight')
-            // }).bind('mouseleave',function(){
-            //     $(this).removeClass('highlight')
-            // })
-
-            // 第一種寫法: $().on('事件',處理函數)
-            // $('p>span').on('mouseenter',function(){
-            //     $(this).addClass('highlight')
-            // }).on('mouseleave',function(){
-            //     $(this).removeClass('highlight')
-            // })
-
-            // $('p>span').on('mouseenter mouseleave',function(){
-            //     $(this).toggleClass('highlight')
-            // })
-
-            // usage
-            // $(window).on('resize scroll',function(){})
-
-            // 第二種寫法: $(document).on('事件','物件',處理函數)
-            // $(document).on('mouseenter mouseleave','p>span',function(){
-            //     $(this).toggleClass('highlight')
-            // })
         });
     </script>
 </head>
