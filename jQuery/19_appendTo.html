@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
 	<meta charset="UTF-8">
 	<title>jQuery</title>
@@ -9,20 +8,19 @@
 	<script>
 		$(function () {	
 			$('#submitButton').click(function(){
-				let name = $('#name').val()
-				$('#feedback').append(`${name}<br>`).css({
-					'textDecoration':'underline',
-				})
+				// $(父).append(子)
+				// $(子).appendTo(父)
+				
+				$('span').appendTo('#feedback')
 			})
 		});			
 	</script>
 </head>
-
 <body>
-	Your Name: <input type="text" id="name">
-	<button id="submitButton">Submit</button>
-
-	<p id="feedback"></p>
+	<p>
+		<button id="submitButton">Submit</button>
+	</p>
+	<span>Silvia</span>
+	<p id="feedback">My name is: </p>
 </body>
-
 </html>

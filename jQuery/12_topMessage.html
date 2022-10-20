@@ -11,14 +11,25 @@
 			$('#topMessage').slideDown(1500).click(function(){
 				$(this).slideUp(2000)
 			})
+			// $(document.getElementById("example2-i")).animate({width: 'toggle'});
+
 		});			
 	</script>
+	<style>
+		.hd{
+			width: 100px;
+			height: 100px;
+			background-color: gold;
+		}
+	</style>
 </head>
 
 <body style="margin: 0px;">
 	<div id="topMessage">
 		We see you're not logged in. Do you want to <a href="#">sign up</a>?
 	</div>
+	<div class="inner hd improve" id="example2-i">Lorem ipsum dolor sit amet.</div>
+	
 </body>
 
 </html>

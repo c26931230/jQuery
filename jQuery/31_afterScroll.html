@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery</title>
+	<link rel="stylesheet" href="./css/style.css">
+	<script src="./js/jquery-3.6.1.js"></script>
+	<style>
+        textarea{
+            width: 300px;
+            height: 200px;
+        }
+    </style>
+	<script>
+		$(function () {	
+            $('#agree').attr('disabled',true)
+
+			$('textarea').scroll(function(){                
+                let scroll_top = $(this).scrollTop()        // 760
+                let scroll_height = $(this)[0].scrollHeight // 964
+                let inner_height = $(this).innerHeight()    // 204
+
+                if(scroll_top == scroll_height - inner_height){
+                    $('#agree').attr('disabled',false)
+                }
+
+                // $(物件)[0].轉換成 JS 物件的屬性和方法
+                // $(物件).get(0).轉換成 JS 物件的屬性和方法
+            })
+		});	
+	</script>
+</head>
+<body>
+    <!-- lorem300 -->
+	<textarea>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora quidem, eius perferendis corrupti quasi ipsam omnis ducimus molestias suscipit asperiores nobis in quas. Ipsam aliquam itaque perferendis, quod odit eos nemo eveniet accusamus esse similique excepturi voluptatem minus tempora numquam iure aliquid amet quo cum quaerat at blanditiis. Rem, totam eos? Odio fuga dicta eaque rerum rem dolores, asperiores at ipsum maxime aspernatur ab optio laborum architecto deleniti praesentium possimus eius molestiae quis neque vero! Expedita illum doloribus vel blanditiis? Hic eveniet qui necessitatibus omnis cum iusto, nam dolor autem odio? Saepe et voluptatem perspiciatis pariatur! Quos vitae cum autem, eum exercitationem culpa nulla in neque ratione nemo maiores veritatis deserunt necessitatibus beatae velit earum officia a laborum. Aliquid dolor vel magnam officia, animi repudiandae voluptates soluta impedit nihil tempora, similique odit. Provident harum, ad at quia corrupti tempora tenetur voluptate ex temporibus eaque adipisci unde suscipit voluptatibus rerum dicta repellat. Iste maxime minus veniam, placeat delectus harum ipsam laboriosam voluptates! Asperiores labore odio iste velit odit, voluptas autem rem voluptatum saepe optio repudiandae recusandae eaque, tenetur quas veniam maiores, distinctio iusto officiis assumenda adipisci commodi totam dolore? Sunt, animi quos sit eum suscipit delectus libero laboriosam reiciendis mollitia, et nesciunt odit, rerum necessitatibus totam dolorum! Eius, recusandae ea? Vero eum, vitae consequuntur non dolor harum. Neque reiciendis voluptas cum numquam consequuntur quasi laudantium tempora, a voluptatum eius nobis voluptatem deserunt excepturi saepe quidem aperiam laborum iusto praesentium porro illo modi! Vero architecto neque optio autem modi perferendis, necessitatibus nostrum voluptatibus, est corrupti iusto? Voluptates porro fuga, doloremque nemo aspernatur odio inventore quo laudantium voluptatem voluptatum facere asperiores quia! Quod, ipsum eaque! Obcaecati veritatis, adipisci sint tenetur voluptatibus quia eaque corporis officiis! Asperiores iure veritatis velit libero ipsa tempora molestias natus nobis consectetur. Ducimus, explicabo nihil molestias consequuntur commodi optio.</textarea>
+
+    <p>
+        <input type="checkbox" id="agree">
+        I agree to the terms and conditions.
+    </p>
+    <p id="feedback"></p>
+</body>
+
+</html>

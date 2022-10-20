@@ -8,10 +8,11 @@
 	height: 500px;
 }
 #sliderBoard{	/* div */
-	border: 1px solid red;
+	border: 1px solid #ccc;
 	width: 60%;
 	height: 550px;
-
+	margin: 100px;
+	margin: 0 auto;
 	overflow: hidden;
 }
 #content{		/* ul */
@@ -23,7 +24,7 @@
 
 /* circle button */
 #contentButton{
-	border: 1px solid red;
+	/* border: 1px solid red; */
 	text-align: center;
 	height: 50px;
 }
@@ -32,8 +33,8 @@
 	height: 20px;
 	border-radius: 50%;
 	background: #ccc;
-	float: left;
-	/* display: inline-block; */
+
+	display: inline-block;
 	margin: 5px;
 }
 #contentButton li.clicked{

@@ -13,11 +13,11 @@
 			$('#checkButton').click(function(){
 				let bread = $('#bread').val()
 				// $.inArray(物件,陣列)
-				// alert($.inArray(bread,breads))
-				if($.inArray(bread, breads) != -1){
-					$('#feedbck').html(`${bread} is in the array.`)
-				}else{
-					$('#feedbck').html(`${bread} is not in the array.`)
+				if($.inArray(bread,breads) != -1){
+					$('#feedback').html(`<span>${bread}</span> 有販賣`)
+				}
+				else{
+					$('#feedback').html(`<span>${bread}</span> 沒有販賣`)
 				}
 			})
 		});			

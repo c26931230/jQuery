@@ -25,12 +25,42 @@
     font: 20px Tahoma;
     padding: 15px;
     text-align: center;
-
-    display: none;
+    position: absolute;
+    left: -100%;
+    transition: 1s;
+    /* display: none; */
+}
+#topMessage.active{
+    left: 0%;
+    width: 100%;
 }
 #topMessage:hover{
     cursor: pointer;
     background: darkgreen;
+}
+.hb{
+    width: 40px;
+    height: 45px;
+    background-color: #666;
+    position: relative;
+}
+.hb span{
+    width: 30px;
+    height: 3px;
+    background-color: black;
+    position: absolute;
+    transition: 1s;
+    /* transform: rotate(45deg); */
+    
+}
+.hb span:nth-child(1){
+    top: 10px;
+}
+.hb span:nth-child(2){
+    top: 20px;
+}
+.hb span:nth-child(3){
+    top: 30px;
 }
 
 /* 14_animation */

@@ -8,19 +8,14 @@
 	<script>
 		$(function () {	
 			$('.food').click(function(){
-				let text = $(this).text()
-				$('#myList').append(`<li>${text}</li>`)
-				$('#mySelect').append(`<option>${text}</option>`)
-				$('#myTable').append(`<tr><td>${text}</td></tr>`)
+				let item = $(this).text()
+
+				$('#myList').append(`<li>${item}</li>`)
+				$('#mySelect').append(`<option>${item}</option>`)
+				$('#myTable').attr('border',1).append(`<tr><td>${item}</td></tr>`)
 			})
 		});			
 	</script>
-	<style>
-		
-		td{
-			border: 1px solid green;
-		}
-	</style>
 </head>
 <body>
 	<h3>Condiments(調味料類)</h3>
@@ -66,7 +61,7 @@
 
 	<!-- create a drop-down menu -->
 	<select id="mySelect"></select>
-	<br><br>
+
 	<!-- create a table -->
 	<table id="myTable"></table>
 

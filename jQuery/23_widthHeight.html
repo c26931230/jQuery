@@ -8,24 +8,31 @@
 	<script>
 		$(function () {	
 			// CSS
-            let imgWidth = $('img').css('width')
-            let imgHeight = $('img').css('height')
-            $('#feedback').text(`圖片寬度: ${imgWidth} 圖片高度: ${imgHeight}`)
-            // jQuery
-            let jqImgWidth = $('img').width()
-            let jqImgHeight = $('img').height()
-            $('#feedback2').text(`jq圖片寬度: ${jqImgWidth} jq圖片高度: ${jqImgHeight}`)
-            let winWidth = $(window).width()
-            let winHeight = $(window).height()
-            $('#feedback3').text(`jq螢幕寬度: ${winWidth} jq螢幕高度: ${winHeight}`)
+			// let imgWidth = $('img').css('width')		//  300px
+			// let imgHeight = $('img').css('height')	//  225px
+
+			// HTML -- XX
+			// let imgWidth = $('img').attr('width')	//  undefined
+			// let imgHeight = $('img').attr('height')	//  undefined
+
+			// jQuery
+			let imgWidth = $('img').width()		//  300
+			let imgHeight = $('img').height()	//  225
+
+			// $('#feedback').text(`Width: ${imgWidth} | Height: ${imgHeight}`)
+
+			// 偵測螢幕的寬和高
+			let winWidth = $(window).width()		
+			let winHeight = $(window).height()	
+
+			$('#feedback').text(`Width: ${winWidth} | Height: ${winHeight}`)
 		});			
 	</script>
 </head>
 <body>
 	<img src="../images/limes.jpg">
 	<div id="feedback"></div>
-    <div id="feedback2"></div>
-    <div id="feedback3"></div>
+
 	<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis animi porro placeat, quos eius ut repudiandae nulla? Ipsa, aperiam ut provident impedit nisi natus commodi magnam nesciunt excepturi repellat consequuntur facere possimus sed mollitia delectus eos quod. Aliquid tempore suscipit molestiae veritatis. Magnam suscipit inventore libero ab quidem veniam tempore ipsam aliquam mollitia? Totam ratione odit, sunt placeat esse dolore exercitationem ipsam incidunt fuga. Ullam, facere expedita temporibus iure provident itaque excepturi, veniam hic deserunt neque aliquid quasi totam officia veritatis vero autem numquam dicta cum laborum similique aut obcaecati voluptatibus qui! Quidem harum id architecto at nostrum assumenda ratione ipsa porro explicabo, minus sit quam enim, delectus rem! Voluptates animi corrupti doloribus quisquam nam sed quis! Eos molestiae ipsam possimus quasi impedit porro quas quisquam, ex debitis quod? Veniam molestias amet eius voluptas officia ut libero. Quam facilis ex iste error quo optio unde architecto adipisci repellat rerum et dignissimos cupiditate tempora dolore veritatis aliquam quas exercitationem consectetur molestiae dolorum totam quisquam, repudiandae a placeat. Quae at, obcaecati itaque inventore maxime harum debitis nam velit laudantium corrupti nesciunt qui dolores dolore ipsa minima aliquid molestiae voluptas eos reprehenderit, voluptatum ullam nisi eligendi. Debitis repellendus voluptatem maiores iusto vel illum?</p>
 	<p>Vel eum quibusdam harum aliquid blanditiis. Ipsam, nisi! Sint ex eligendi maxime quidem corrupti dolor nam enim iusto cupiditate atque accusantium alias ipsa veniam, saepe placeat, eos recusandae iure magni totam necessitatibus, veritatis temporibus. Numquam corrupti illo sit magnam. Odit magnam, laudantium assumenda eligendi tempore non ea inventore aliquam eos, quis modi consequatur, dignissimos minus! Laborum et, quia ipsa vel nesciunt ea recusandae praesentium ad labore nemo autem quasi at error maxime illum velit, repellat earum. Ab exercitationem quos, vitae ea aliquid natus. Voluptates debitis impedit tempora pariatur laudantium a fugit voluptate officiis quidem distinctio quia, nesciunt aspernatur harum est corrupti quam aperiam hic natus magnam nemo itaque error quaerat vero. Maiores odit mollitia, accusantium vero nostrum iure cupiditate amet enim. Inventore magnam repellat soluta? Voluptatum nam accusamus rerum nobis eligendi tenetur in ea tempora vel reiciendis, aperiam quas? Hic temporibus dolor molestias! Rem doloremque mollitia ipsum magnam maiores facere ipsam incidunt deserunt. Veritatis modi porro totam blanditiis, inventore dolores vitae explicabo commodi, quod labore hic dolorum ad eaque laborum suscipit? Adipisci harum animi vitae dolor aspernatur quibusdam nihil, molestiae minima expedita dolorem velit veniam sapiente? Quis ex consequuntur necessitatibus! Aliquam, delectus laborum. Tenetur natus pariatur aliquam. Officia, tenetur rem.</p>
 	<p>Aut facere tempora quisquam dignissimos consequuntur sequi blanditiis eligendi eaque ab eius tenetur dolores, veniam excepturi pariatur necessitatibus similique inventore accusantium perspiciatis libero aspernatur obcaecati quis? Delectus temporibus quidem quisquam sunt quod. Maxime sint, eaque quis officiis iusto corrupti impedit ea minima qui eligendi magnam natus earum ab fuga sequi, tempore iste. Harum, distinctio aliquid exercitationem neque possimus molestias dolore quaerat iusto rerum officiis quibusdam omnis nihil eum optio doloremque qui molestiae dignissimos odit enim debitis sequi necessitatibus ea! Ut illum quidem laborum architecto excepturi maxime perspiciatis commodi quam exercitationem. Quo temporibus assumenda iste autem quod magnam consequuntur consectetur aperiam, odio sapiente doloribus id corporis repellendus nihil? Odio, dicta obcaecati voluptas consectetur animi error! Eaque, ipsum unde laborum ab aperiam quidem eveniet expedita, quisquam nihil a impedit obcaecati error at facilis alias nobis, minus corrupti! Ducimus assumenda aliquid laborum nisi maiores eaque aut praesentium impedit dicta inventore dolorum ullam corporis harum, voluptates at, saepe recusandae? Aperiam voluptatibus praesentium blanditiis nobis nihil fugit, maxime illo fugiat voluptas placeat recusandae quidem qui ut dignissimos. Delectus animi magni sunt temporibus fugit natus, minima optio alias in nemo, quis consequuntur, fugiat eaque facilis quos asperiores rem dolores doloremque. Autem assumenda voluptas atque quaerat sequi?</p>

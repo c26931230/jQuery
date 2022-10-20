@@ -8,7 +8,7 @@ $(function () {
 
     function changeSize(size){
         let currentSize = parseInt($('div').css('fontSize'))
-        // alert(currentSize)
+        alert(currentSize)
 
         if(size == 'small'){
             newSize = currentSize - 2

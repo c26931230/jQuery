@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery</title>
+	<link rel="stylesheet" href="./css/style.css">
+	<script src="./js/jquery-3.6.1.js"></script>
+	<style>
+        textarea{
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+	<script>
+		$(function () {	
+			$('textarea').scroll(function(){
+                // step 1
+                // $('#feedback').text(`You have scrolled.`)
+
+                // step 2  scrollTop(): 內部資料超過容器的高度(px)
+                // let scroll_top = $(this).scrollTop()
+                // $('#feedback').text(`You have scrolled, and are at position ${scroll_top}`)
+
+                // step 3 加了 CSS 之後
+                let scroll_top = $(this).scrollTop()
+                $('#feedback').text(`You have scrolled, and are at position ${scroll_top}`)
+            })
+		});	
+	</script>
+</head>
+<body>
+    <!-- lorem100 -->
+	<textarea cols="30" rows="10">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus, amet veritatis, rerum aut officia ipsam optio, ullam tempora fugit corrupti similique est! Dolore doloremque blanditiis nobis ipsa beatae deserunt dolorum quaerat neque maiores molestias porro voluptates voluptatem minus quo reiciendis perspiciatis voluptatibus sapiente cum repellat nesciunt iure iusto, earum in. Consequatur eum ex vitae fugiat explicabo sint dolorem pariatur dicta maiores commodi! Quod possimus nulla eveniet similique iusto perferendis quis! Voluptate voluptatum, similique earum maxime consequuntur error nemo temporibus officiis expedita obcaecati quaerat iusto? Quisquam debitis neque dolore qui commodi voluptate ipsum eum dolorum tempora, doloremque, voluptatem eaque quibusdam magni.</textarea>
+
+    <p id="feedback"></p>
+</body>
+
+</html>

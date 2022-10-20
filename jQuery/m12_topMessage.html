@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery</title>
+	<link rel="stylesheet" href="./css/style.css">
+	<script src="./js/jquery-3.6.1.js"></script>
+	<script>
+		$(function () {	
+            $('.hb').click(function(){
+                $('#topMessage').toggleClass('active')
+                if($('#topMessage').hasClass('active')){
+                    $('#span1').css({
+                        top: '20px',
+                        transform:'rotate(45deg)',
+                    })
+                    $('#span2').css({
+                        display: 'none',
+                    })
+                    $('#span3').css({
+                        top: '20px',
+                        transform:'rotate(-45deg)',
+                    })
+                }
+                else{
+                    $('#span1').css({
+                        top: '10px',
+                        transform:'rotate(0deg)',
+                    })
+                    $('#span2').css({
+                        display: 'block',
+                    })
+                    $('#span3').css({
+                        top: '30px',
+                        transform:'rotate(0deg)',
+                    })
+                }
+            })
+		});			
+	</script>
+</head>
+
+<body style="margin: 0px;">
+    <div class="hb">
+        <span id="span1"></span>
+        <span id="span2"></span>
+        <span id="span3"></span>
+    </div>
+	<div id="topMessage">
+		We see you're not logged in. Do you want to <a href="#">sign up</a>?
+	</div>
+</body>
+
+</html>

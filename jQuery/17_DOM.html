@@ -3,31 +3,35 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>jQuery</title>
+	<title>Document</title>
 	<link rel="stylesheet" href="./css/style.css">
 	<style>
 		.menu{
 			list-style: none;
-			padding: 0;
-			margin: 0;
+			padding-inline-start: 20px;
 		}
 		.bold{
-			font-weight: 600;
-			font-size: 25px;
+			font: bold 25px Calibri;
 		}
 	</style>
 	<script src="./js/jquery-3.6.1.js"></script>
 	<script>
 		$(function () {	
-			$(`.name li:nth-child(1)`).append(`(第一位)`)
-			$(`.name li:eq(0)`).append(`(First)`)
-			$(`.name li:eq(1)`).append(`(sencond)`)
-			$(`.name li:first`).append(`(good)`)
-			$(`.name li:last`).append(`(good job)`)
+			// $(`.name li:nth-child(1)`).append(` (First)`)
+			// $(`.name li:eq(0)`).append(` (First)`)
+			// $(`.name li:first`).append(` (First)`)
+			$(`.name`).find('li').first().append(` (First)`)
+			$(`.name`).find('li').last().append(` (Last)`)
+			// ==========
+
+			// $(`.menu`).find('li').first().addClass('bold')
+			// $(`.menu`).find('li').first().addClass('bold').nextAll().hide()
+			// $(`.menu`).find('li').first().addClass('bold').click(function(){}).nextAll().hide()
 			$(`.menu`).find('li').first().addClass('bold').click(function(){
+				// $(this).nextAll().show()
 				$(this).nextAll().toggle()
 			}).nextAll().hide()
-		
+
 		});			
 	</script>
 </head>

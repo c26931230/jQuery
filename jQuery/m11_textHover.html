@@ -8,20 +8,15 @@
 	<script src="./js/jquery-3.6.1.js"></script>
 	<script>
 		$(function () {	
-			// 偵測螢幕上的 X 和 Y 座標
-			// $('.textHover').mousemove(function(e){
-			// 	$('#theDiv').show().text(`X: ${e.clientX} | Y: ${e.clientY}`)
-			// })
-
-			$('.textHover').mousemove(function(e){
-				let theText = $(this).attr('data-text')
-				$('#theDiv').show().text(theText).css({
-					left: e.clientX + 10,
-					top: e.clientY + 10,
-				})
-			}).mouseout(function(){
-				$('#theDiv').hide()
-			})
+           $('.textHover').mousemove(function(e){
+                let theText = $(this).attr('data-text')
+                $('#theDiv').show().text(theText).css({
+                    left: e.clientX + 10,
+                    top: e.clientY + 10,
+                })
+           }).mouseout(function(){
+            $('#theDiv').hide()
+           })
 		});			
 	</script>
 </head>

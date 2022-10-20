@@ -9,18 +9,19 @@
 	<script src="js/jquery-ui.js"></script>
 	<script>
 		$(function () {	
+			// $('#imgBoard').mouseover().mouseout()
 			$('#imgBoard').hover(function(){
-				$(this).animate({
+				$(this).stop(true).animate({
 					left:0,
 					backgroundColor:'red',
-				},1500,'easeInSine')
+					
+				},1500, 'easeInSine')
 			},function(){
 				$(this).animate({
 					left:'-130px',
-					backgroundColor:"#ccc",
+					backgroundColor:'#ccc',
 				},2000,'easeOutBounce')
 			})
-			
 		});			
 	</script>
 </head>
