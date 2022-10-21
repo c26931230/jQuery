@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery</title>
+	<link rel="stylesheet" href="./css/style.css">
+	<script src="./js/jquery-3.6.1.js"></script>
+	<style>
+       body{
+        background: url(../images/bg100.png);
+       }
+       #skin{
+        height: 2000px;
+       }
+       p{
+        width: 100%;
+        position: fixed;
+        top: 250px;
+        text-align: center;
+        font-size: 25px;
+       }
+       .toBottom{
+        color: red;
+       }
+    </style>
+	<script>
+        ///*****
+		$(function () {	
+            $(window).scroll(function(){
+                console.log($(window).scrollTop())//1057
+                
+                console.log($(document).height()) //2016
+                console.log($(window).innerHeight())//959
+                //document 比 window 高
+                //959
+                let scrollTop = $(window).scrollTop()
+                $('p>span').text(scrollTop)
+                if(scrollTop == $(document).height() - $(window).innerHeight()){
+                    $('p>span').addClass('toBottom')
+                }else{
+                    $('p>span').removeClass('toBottom')
+                }
+            })
+
+                // $(物件)[0].轉換成 JS 物件的屬性和方法
+                // $(物件).get(0).轉換成 JS 物件的屬性和方法
+            
+		});	
+	</script>
+</head>
+<body>
+    <div id="skin">
+        <p>scrollTop: <span>0</span></p>
+    </div>
+</body>
+
+</html>

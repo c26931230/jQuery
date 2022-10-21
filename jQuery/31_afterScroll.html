@@ -19,8 +19,9 @@
                 let scroll_top = $(this).scrollTop()        // 760
                 let scroll_height = $(this)[0].scrollHeight // 964
                 let inner_height = $(this).innerHeight()    // 204
-
-                if(scroll_top == scroll_height - inner_height){
+                let a = parseInt(scroll_height - inner_height)
+                let b = parseInt(scroll_top)
+                if(b == a){
                     $('#agree').attr('disabled',false)
                 }
 
