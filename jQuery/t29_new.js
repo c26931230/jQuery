@@ -1,18 +1,27 @@
 $(function () {
-    let sliderWidth = $('#sliderBoard').width()
-    let sliderHeight = $('#sliderBoard').height()
+    let divWidth = $('#sliderBoard').width()
     let imgCount = $('#content li').length
+    resize()
     $(window).resize(function(){
-        moveCenter()
+        resize()
     })
-    function moveCenter(){
-        let winWidth = $(window).width()
-        let winHeight = $(window).height()
+    function resize(){
+        let WinWidth = $(window).width()
+        let WinHeight = $(window).height()
+        let divWidth = $('#sliderBoard').width()
+        let divHeight = $('#sliderBoard').height()
         $('#sliderBoard').css({
-            left: (winWidth - sliderWidth ) / 2,
-            top: (winHeight - sliderHeight) / 2
+            left: (WinWidth - divWidth) / 2,
+            top: (WinHeight - divHeight) / 2,
         })
     }
+
+
+
+
+
+
+
     for(let i = 0; i < imgCount; i++){
         $('#contentButton').append(`<li></li>`)
     }

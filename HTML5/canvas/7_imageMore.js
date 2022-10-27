@@ -43,11 +43,16 @@ function doFirst(){
 }
 function loadImage(){
     //透明度
-    context.globalAlpha=0.5;
+    // context.globalAlpha=0.5;
     
-    context.drawImage(pic1, 0, 0,canvas.width,canvas.height);
+    // context.drawImage(pic1, 0, 0,canvas.width,canvas.height);
+    // context.globalAlpha=1;
+    // context.drawImage(pic2, 0, 500,300,300);//左下
+    context.globalAlpha=0.5;
+    context.drawImage(pic1,0,0,canvas.width,canvas.height)
     context.globalAlpha=1;
-    context.drawImage(pic2, 0, 500,300,300);//左下
+    context.drawImage(pic2,0,500,300,300)
+
     
 }
 window.addEventListener('load',doFirst)

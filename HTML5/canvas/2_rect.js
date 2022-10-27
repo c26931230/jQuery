@@ -18,7 +18,19 @@ function doFirst(){
     context.rect(700, 600, 300, 200);
     context.fill();
     context.clearRect(150,150,50,50)
-    
+    context.strokeStyle='blue';
+    context.strokeRect(300,300,100,200)
+    context.beginPath();
+    context.arc(500,300,150,0,1.5*Math. PI)
+    context.stroke();
+    context.closePath();
+    context.moveTo(600,300);
+    context.lineTo(600,700);    
+    context.closePath();
+    context.fillStyle='#fa0'
+    context.strokeStyle='#153462';;
+    context.stroke();
+    // context.fill();
     //橡皮擦
     // context.clearRect(0,0,canvas.width,canvas.height)
 }

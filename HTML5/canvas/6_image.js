@@ -20,12 +20,17 @@ function doFirst(){
      
      context.stroke();
     //  ============
-    let pic = new Image()
-    pic.src = '../../images/cityscape.jpg'
-    pic.addEventListener('load',function(){
-        context.drawImage(pic, 0, 0,canvas.width,canvas.height);
-    })
+    // let pic = new Image()
+    // pic.src = '../../images/cityscape.jpg'
+    // pic.addEventListener('load',function(){
+    //     context.drawImage(pic, 0, 0,canvas.width,canvas.height);
+    // })
 
+    let img = new Image()
+    img.src='../../images/cityscape.jpg'
+    img.addEventListener('load',function(){
+        context.drawImage(img,0,0,canvas.width,canvas.height);
+    })
     
   
 }
