@@ -4,12 +4,17 @@ $(function () {
     resize()
     $(window).resize(function(){
         resize()
-        divWidth = $('#sliderBoard').width()
-        imgCount = $('#content li').length
+        divWidth = $('#sliderBoard').width() //div寬
+        imgCount = $('#content li').length //li數量
         $('#content li').width(divWidth) //li 寬           
         $('#content').width(divWidth * imgCount) //ul 寬
+    });
+    for(let i = 0; i < imgCount; i++){
+        $('#contentButton').append(`<li></li>`)
+    }
+    $('#contentButton li:nth-child(1)').addClass('clicked')
 
-    })
+    // ==========
     function resize(){
         let WinWidth = $(window).width()
         let WinHeight = $(window).height()
@@ -20,16 +25,6 @@ $(function () {
             top: (WinHeight - divHeight) / 2,
         })
     }
-
-    for(let i = 0; i < imgCount; i++){
-        $('#contentButton').append(`<li></li>`)
-    }
-    $('#contentButton li:nth-child(1)').addClass('clicked')
-
-    $('#content li').width(divWidth)            // li 的寬
-    $('#content').width(divWidth * imgCount)    // ul 的寬
-
-    // ==========
     let index = 0
     let timer = setInterval(moveToTheNext, 2000)
 
@@ -46,6 +41,7 @@ $(function () {
 
         timer = setInterval(moveToTheNext, 2000)
     })
+   
 
     function moveToTheNext(){
         if(index < imgCount - 1){
