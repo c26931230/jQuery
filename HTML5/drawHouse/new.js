@@ -9,7 +9,7 @@ function doFirst(){
     timer++
 
         function drawing(){
-            // setInterval(drawing,50)
+            setInterval(drawing,50)
         
         // 格線
         context.beginPath();
