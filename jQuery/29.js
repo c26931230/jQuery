@@ -4,8 +4,8 @@ $(function () {
     resize()
     $(window).resize(function(){
         resize()
-        divWidth = $('#sliderBoard').width() //div寬
-        imgCount = $('#content li').length //li數量
+        divWidth = $('#sliderBoard').width() //div 寬
+        imgCount = $('#content li').length //li 數量
         $('#content li').width(divWidth) //li 寬           
         $('#content').width(divWidth * imgCount) //ul 寬
     });
