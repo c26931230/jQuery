@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <title>customized video</title>
     <link rel="stylesheet" href="main.css">
-    <script src="new.js"></script>
+    <script src="mnew.js"></script>
+     <!-- icon -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <div id="skin">
@@ -18,12 +21,18 @@
                 <button id="upButton">Volume up</button>
                 <button id="downButton">Volume down</button>
                 <button id="mutedButton">muted</button>
-                <button id="fullButton">full</button>
+                <!-- <button id="fullButton">full</button> -->
             </div>
             <div id="defaultBar">
                 <div id="progress"></div>
             </div>
         </nav>
+        <div class="wrap">
+            <p>音量:</p>
+            <div id="voiceBar">
+                <div id="voiceProgress"></div>
+            </div>
+        </div>
     </div>
 </body>
 </html>

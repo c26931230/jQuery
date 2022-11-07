@@ -8,14 +8,14 @@
     <button onclick="show()">show storage</button>
 
     <script>
-        function show(){
+       function show(){
             if(sessionStorage['username'] == null){
-                let name = prompt(`What's your username?`)
+                let name = prompt(`what's your name?`)
                 sessionStorage['username'] = name
             }else{
                 alert(sessionStorage['username'])
             }
-        }
+       }
     </script>
 </body>
 </html>

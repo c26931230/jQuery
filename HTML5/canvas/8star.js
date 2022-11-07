@@ -1,42 +1,46 @@
 function doFirst(){
-    var canvas = document.getElementById("canvas");
-    var ctx = canvas.getContext("2d");
+    canvas = document.getElementById('canvas');
+    context = canvas.getContext('2d');
+     //格線
+    //  for(let i=0; i<100; i++){
+    //     let interval = i * 50
+    //     //水平
+    //     context.moveTo(0,interval)
+    //     context.lineTo(canvas.width,interval)
+    //     context.fillText(interval, 0, interval);
+        
+    //     //垂直
+    //     context.moveTo(interval,0)
+    //     context.lineTo(interval,canvas.height)
+    //     context.fillText(interval, interval,10);
+    //     context.strokeStyle="#ccc"
+    //     context.stroke()
+    // }
     function drawStar(cx, cy, spikes, outerRadius, innerRadius) {
+        // var rot = Math.PI / 2 * 3;
         var rot = Math.PI / 2 * 3;
         var x = cx;
         var y = cy;
         var step = Math.PI / spikes;
-
-        ctx.strokeSyle = "#000";
-        ctx.beginPath();
-        ctx.moveTo(cx, cy - outerRadius)
+        context.beginPath();
+        context.moveTo(cx, cy - outerRadius)
         for (i = 0; i < spikes; i++) {
             x = cx + Math.cos(rot) * outerRadius;
             y = cy + Math.sin(rot) * outerRadius;
-            ctx.lineTo(x, y)
+            context.lineTo(x, y)
             rot += step
 
             x = cx + Math.cos(rot) * innerRadius;
             y = cy + Math.sin(rot) * innerRadius;
-            ctx.lineTo(x, y)
+            context.lineTo(x, y)
             rot += step
         }
-        ctx.lineTo(cx, cy - outerRadius)
-        ctx.closePath();
-        ctx.lineWidth = 1;
-        ctx.strokeStyle = 'blue';
-        ctx.stroke();
-        // ctx.fillStyle = 'skyblue';
-        // ctx.fill();
-
+        context.lineTo(cx, cy - outerRadius)
+        context.closePath();
+        context.lineWidth = 5;
+        context.stroke();
     }
-
-    drawStar(400, 300, 8, 80, 15);
-    // drawStar(175, 100, 12, 30, 10);
-    // drawStar(75, 200, 6, 30, 15);
-    // drawStar(175, 200, 20, 30, 25);
-
-      
+    drawStar(250, 250, 8, 200, 100);
 }
 
 window.addEventListener('load',doFirst)

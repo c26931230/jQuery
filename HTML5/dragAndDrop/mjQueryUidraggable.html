@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Drap & Drop</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.js"></script>
+    <script src="../../jQuery/js/jquery-ui.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#drag').draggable({
+                containment:'parent'
+            })
+        })
+    </script>
+    <style>
+        .div{
+            width: 400px;
+            height: 400px;
+            background-color: #ccc;
+        }
+        #drag{
+            background-color: darkcyan;
+            padding: 20px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="div">
+        <span id="drag">Drag me</span>
+    </div>
+</body>
+</html>

@@ -8,7 +8,6 @@
 
 }
 nav{
-    /* border: 1px solid red; */
     margin-top: 10px;
 }
 button{
@@ -21,7 +20,6 @@ button{
     width: 637px;
     height: 20px;
     padding: 2px;
-
     margin-top: 10px;
     position: relative;
     left: 28px;
@@ -30,4 +28,21 @@ button{
     width: 0px;
     height: 20px;
     background: #aaa;
+}
+
+#voiceBar{
+    width: 100px;
+    height: 20px;
+    border: 1px solid black;
+}
+#voiceProgress{
+    background-color: black;
+    width: 100px;
+    height: 100%; 
+}
+.wrap{
+    display: flex;
+    align-items: center;
+    position: relative;
+    left: 28px;
 }

@@ -5,24 +5,22 @@ function doFirst(){
     defaultBar = document.getElementById("defaultBar");
     progress = document.getElementById("progress");
     stopButton = document.getElementById("stopButton");
+    fullButton = document.getElementById("fullButton");
 
     barsize = parseInt(window.getComputedStyle(defaultBar).width)
-    // alert(barsize)
     playButton.addEventListener('click', playOrPause);
     myMovie.addEventListener('click', playOrPause);
     defaultBar.addEventListener('click', clickBar);
     stopButton.addEventListener('click', stop)
-
-    // 全螢幕**
-    // full.addEventListener('click', function(){
-    //     myMovie.web
-    // })
-
+    // 全螢幕
+    fullButton.addEventListener('click',function(){
+        myMovie.webkitEnterFullScreen()
+    })
 }
 function playOrPause(){
     if(!myMovie.paused && !myMovie.ended){ //影片正在跑
         myMovie.pause()
-        playButton.innerText = "paly"
+        playButton.innerText = "play"
     }else{
         myMovie.play()
         playButton.innerText = "pause"
@@ -34,14 +32,14 @@ function update(){
         let size =barsize / myMovie.duration * myMovie.currentTime
             progress.style.width = `${size}px`
     }else{
-        playButton.innerText = "paly"
+        playButton.innerText = "play"
         progress.style.width = `0px`;
         myMovie.currentTime = 0;
     }
 }
 
 function stop(){
-    playButton.innerText = "paly"
+    playButton.innerText = "play"
     progress.style.width = `0px`;
     myMovie.currentTime = 0;
     myMovie.pause()
