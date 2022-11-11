@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./7_style.css">
+    <title>SVG</title>
+</head>
+
+<body>
+    <!-- <svg viewBox="min-x min-y width height" ></svg> -->
+    <svg id="svg_1" viewBox="-50 -50 100 100">
+        <circle cx="0" cy="0" r="20">
+            <animate attributeType="XML" values="-50;50;-50;0" attributeName="cx" dur="2s" repeatCount="3" />
+        </circle>
+    </svg>
+    <svg id="svg_2" viewBox="-50 -50 100 100">
+        <circle cx="0" cy="0" r="20" />
+        <g>
+            <rect x="-25" y="-25" width="50" height="50" style="" />
+            <line x1="-25" y1="0" x2="25" y2="0" />
+            <line x1="0" y1="-25" x2="0" y2="25" />
+            <animateTransform attributeName="transform"
+                type="rotate"
+                dur="2s"
+                repeatCount="3"
+                values="0;360"/>
+
+        </g>
+    </svg>
+    <!-- <img src="" alt=""> -->
+
+</body>
+
+</html>

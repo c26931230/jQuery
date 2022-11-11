@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./0_style.css">
+    <title>SVG</title>
+</head>
+<body>
+    <svg id="svg">
+        <!-- <polygon points="100 100,250 80,300 150,200 250, 70 220" style="stroke: red; fill:none"/> -->
+        <!-- <polyline points="" style=""/> -->
+    </svg>
+
+     <script>
+        window.onload = function(){
+            let svg = document.getElementById('svg')
+            let lineString = ''
+
+            lineString += `<g stroke="rgba(0,0,0,0.3)" style="font: 10px Tahoma;">`
+                for(let i = 0; i < 100; i++){
+                    let interval = i * 50
+
+                    lineString += `
+                        <!-- 水平線 -->
+                        <line x1="0" y1="${interval}" x2="1000" y2="${interval}" />
+                        <text x="0" y="${interval}">${interval}</text>
+
+                        <!-- 垂直線 -->
+                        <line x1="${interval}" y1="0" x2="${interval}" y2="800" />
+                        <text x="${interval}" y="8">${interval}</text>
+                    `
+                    lineString +=` <polygon points="100 100,250 80,300 150,200 250, 70 220" style="stroke: red; fill:none"/>
+                    <polyline points="100 400, 200 450, 50 600, 150 700" style="stroke: red; fill:none"/>`
+                }                
+            lineString += `</g>`
+            svg.innerHTML = lineString
+        }
+     </script>
+</body>
+</html>

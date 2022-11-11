@@ -1,0 +1,17 @@
+svg{
+    width: 250px;
+    border: 2px  solid;
+}
+#svg_1{
+    stroke: rgb(133, 188, 188);
+    fill: none;
+    stroke-width: 5px;
+}
+#svg_2{
+    stroke: rgb(134, 39, 144);
+    fill: none;
+    stroke-width: 5px;
+}
+#svg_2 circle{
+    stroke: rgb(48, 29, 172);
+}

@@ -49,5 +49,20 @@ function addItem(itemId, itemValue){
         storage['addItemList'] += `${itemId}, `
         storage.setItem(itemId, itemValue)
     }
+
+    // 計算購買數量及小計
+    // let itemString = storage.getItem('addItemList') //way2
+    let itemString = storage['addItemList'] //way1
+    let items = itemString.substr(0,itemString.length - 2).split(', ') //-2 減 '- '
+    console.log(items);
+    document.getElementById("itemCount").innerText = items.length;
+    subtotal = 0
+    for(let i = 0; i < items.length; i++){
+        let itemInfo = storage.getItem(items[i])
+        let itemPrice = parseInt(itemInfo.split('|')[2])
+        subtotal += itemPrice
+    }
+        
+    document.getElementById("subtotal").innerText= subtotal;
 }
 window.addEventListener('load', doFirst);
