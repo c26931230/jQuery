@@ -15,3 +15,11 @@ svg{
 #svg_2 circle{
     stroke: rgb(48, 29, 172);
 }
+/* svg_3 */
+#svg_3{
+    fill:none;
+    stroke:darkslategray;
+}
+#svg_3 circle{
+    fill:darkslategray;
+}

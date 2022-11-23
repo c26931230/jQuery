@@ -1,0 +1,46 @@
+1. IE 不支援 Vue3 (因為 Vue3 改用 ES6 的 proxy)
+2. 相異之處: 搭配的版本不同
+vue@2 -- vue-router@3 --vuex@3
+vue@3 -- vue-router@4 --vuex@4
+
+3.Compositon Api 優點:
+減少了 this 的使用，因為 this 有指向的問題
+Compositon Api有更好的封裝共用邏輯
+清楚的追蹤資料來源
+劃分那些資料需要被 Vue 追蹤， 哪些不要
+
+4.前端工程師面試問題集
+this 是甚麼?
+.html <button id="theBtn">click</button>
+.js document.getElementById('theBtn').addEventListien('click', function(){
+    conslog.log(e.target.nodeName); //button
+    conslog.log(e.type); //click
+})
+this 在 js 裡面代表執行當下的外成物件，所以this 在執行當下才有意義
+至於 this 代表哪個物件跟他的情境(context)有關
+
+(1)
+closure 閉包
+
+如何呼叫後端 API，同步和非同步差別
+說明 Vue 如何做非同步?
+Vue 如何呼叫 API ?
+何謂 Vue CLI ?
+適用 CLI 下過什麼指令?
+
+*下指令都是CLI gulp sass都有
+
+有甚麼問題嗎?
+是擴編的缺?還是離職的缺?
+公司溝通方式
+接到案子後如何溝通
+
+
+AJAX 問題很愛問!!
+5. AJAX
+Javascript: XMLHttpRequest 物件
+jQuery: $.ajax()
+plugin: Axios.js
+ES6: Promise 物件的 then()
+ES6: Fetch Api (不用引用檔案)
+ES6以後出來的:async, Await, ...

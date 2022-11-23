@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3"></script>
+</head>
+<body>
+    <div id="app">
+        <h1>{{msg}}</h1>
+        <button @click="action">Click me</button>
+    </div>
+    <script>
+        // vue3 composition api
+        const {ref} = Vue
+        const App = {
+            setup(){
+                const msg = ref('hello')
+                語法:
+                // ref:可以接受所有資料型態，但她不會對物件和陣列內部的屬性進行監聽(watch)，取用資料時'需要'使用 value
+
+                // reactive:只接受物件和陣列，可以做深層偵聽，以及取用資料時'不需要'使用 value
+                let age = 10;
+                let ans = false;
+// ***
+                const action = ()=> alert(msg.value + 'vue3!')
+                return {
+                    msg,
+                    action,
+                }
+            }
+        }
+        Vue.createApp(App).mount('#app')
+// =================================
+// vue3
+        // Vue.createApp({
+        //     data(){
+        //         return{
+        //             msg: 'hello',
+        //         }
+        //     },
+        //     methods:{
+        //             action:function(){
+        //                 alert(this.msg + 'vue3')
+        //             }
+        //         }
+        // }).mount('#app')
+        
+   
+    </script>
+</body>
+</html>

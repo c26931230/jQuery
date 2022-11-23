@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./0_style.css">
+    <title>SVG</title>
+</head>
+
+<body>
+    <svg id="svg">
+        <!-- <path d="M100 100L250 250L400 50L50 200"
+             fill="none" stroke="red" stroke-width="5" /> -->
+    </svg>
+
+    <script>
+        window.onload = function () {
+            let svg = document.getElementById('svg')
+            let lineString = ''
+
+            lineString += `<g stroke="rgba(0,0,0,0.3)" style="font: 10px Tahoma;">`
+            for (let i = 0; i < 100; i++) {
+                let interval = i * 50
+
+                lineString += `
+                        <!-- 水平線 -->
+                        <line x1="0" y1="${interval}" x2="1000" y2="${interval}" />
+                        <text x="0" y="${interval}">${interval}</text>
+
+                        <!-- 垂直線 -->
+                        <line x1="${interval}" y1="0" x2="${interval}" y2="800" />
+                        <text x="${interval}" y="8">${interval}</text>
+                    `
+                lineString += ` <!-- <path d="M100 100L250 250L400 50L50 200"
+             fill="none" stroke="red" stroke-width="5" />-->
+             <path d="M150 250Q275 125L400 200"
+             fill="none" stroke="red" stroke-width="5" /> 
+             `
+            }
+            lineString += `</g>`
+            svg.innerHTML = lineString
+        }
+    </script>
+</body>
+
+</html>
