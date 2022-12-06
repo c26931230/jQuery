@@ -1,0 +1,43 @@
+<script>
+    let mouseX = 0
+    let mouseY = 0
+    let offsetX = 0
+    let offsetY = 0
+    let isDown = false
+
+    const items = document.querySelectorAll(".items");
+    const lists = document.querySelectorAll('.list');
+
+    for (let i = 0; i < items.length; i++) {
+        items[i].addEventListener('mousedown', function (e) {
+            isDown = true
+            mouseX = e.pageX
+            mouseY = e.pageY
+            document.addEventListener('mousemove', move)
+        });
+
+        document.addEventListener('mouseup', function (e) {
+            if (isDown) {
+                offsetX += e.pageX - mouseX
+                offsetY += e.pageY - mouseY
+            }
+            isDown = false
+            document.removeEventListener('mousemove', move)
+        });
+
+
+        function move(e) {
+            if (isDown) {
+                const dx = e.pageX - mouseX
+                const dy = e.pageY - mouseY
+                items[i].style.transform = translate(${offsetX + dx}px,${offsetY + dy}px);
+            }
+        }
+
+
+
+    }
+
+
+
+</script>

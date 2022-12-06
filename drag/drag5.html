@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box1 {
+            width: 100px;
+            height: 100px;
+            background-color: #fa0;
+            position: absolute;
+        }
+
+        #box2 {
+            width: 100px;
+            height: 100px;
+            background-color: #af0;
+            position: absolute;
+            left: 100px;
+        }
+        #wrap1{
+            /* display: flex;
+            flex-wrap: wrap; */
+            position: relative;
+            width: 50%;
+            border: 1px solid #ddd;
+            height: 500px;
+        }
+        .item{
+            width: 100px;
+            height: 100px;
+            background-color: #af0;
+            position: absolute;
+        }
+        .item:nth-child(1){
+            left: 0;
+        }
+        .item:nth-child(2){
+            left: 100px;
+        }
+        .item:nth-child(3){
+            left: 200px;
+        }
+        .item:nth-child(4){
+            left: 300px;
+        }
+        .item:nth-child(5){
+            left: 400px;
+        }
+        #wrap2{
+            width: 50%;
+            height: 500px;
+            border: 1px solid darkcyan;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap1">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+    </div>
+    <div id="wrap2">
+        <div id="item1">
+            <img src="https://picsum.photos/100/100/?random=10">
+        </div>
+    </div>
+    <script>
+        window.onload = function () {
+            var box1 = document.getElementById("box1");
+            var box2 = document.getElementById("box2");
+            var items = document.querySelectorAll(".item");
+            items.forEach(i => {
+                 drag(i);   
+            });
+            var item1 = document.getElementById("item1");
+            wrap1 = document.getElementById("wrap1");
+            var new_item = document.createElement('div');
+            new_item.className = "item";
+            item1.onclick = function(){
+                wrap1.appendChild(new_item)
+                drag(new_item);
+            }
+
+            // 拖曳函數
+            // 參數，拖曳元素
+            function drag(obj) {    
+                // 為box1 綁定鼠標按下事件
+                //當屬標在拖曳元素上按下時，開始拖曳 onmousedown
+                obj.onmousedown = function (event) {
+
+                    // 設置 obj 捕獲所有鼠標按下事件
+                    // way1
+                    // if(obj.setCapture){
+                    //     obj.setCapture(); 
+                    // }
+                    // way2
+                    obj.setCapture && obj.setCapture();
+
+                    event = event || window.event;
+                    //div 的偏移量 鼠標.clientX  - 元素.offesetLeft          
+                    //div 的偏移量 鼠標.clientY  - 元素.offesetTop
+                    var ol = event.clientX - obj.offsetLeft;
+                    var ot = event.clientY - obj.offsetTop;
+
+                    //當屬標移動時，被拖曳元素跟隨鼠標移動，onmousemove
+                    document.onmousemove = function (event) {
+                        event = event || window.event;
+                        // 獲取鼠標座標
+                        var left = event.clientX - ol;
+                        var top = event.clientY - ot;
+                        // 修改 obj 位置
+                        obj.style.left = left + "px";
+                        obj.style.top = top + "px";
+                    };
+                    // 為 document 綁定一個鼠標鬆開事件
+                    document.onmouseup = function () {
+                        // 當鼠標鬆開時，被拖曳元素固定在當前位置 onmouseup
+                        // 取消 document 的 onmousemove 事件
+                        document.onmousemove = null;
+                        // 取消 document 的 onmouseup 事件
+                        document.onmouseup = null;
+
+                        // 鼠標鬆開時，取消對事件捕獲
+                        // way1
+                        if (obj.releaseCapture) {
+                            obj.releaseCapture();
+                        }
+                        // way2
+                        obj.releaseCapture && obj.releaseCapture();
+
+
+                    };
+                    // 當我們拖曳網頁的內容時，瀏覽器會默認去搜尋引擎中搜索內容，此時會導致拖曳功能異常，這是瀏覽器提供的默認行為，如果不想要這個行為，可以 return false 來取消默認行為
+
+                    // 但 ie8不試用
+                    return false;
+                };
+            }
+
+
+        }
+
+    </script>
+</body>
+
+</html>
